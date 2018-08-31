@@ -12,6 +12,8 @@ import { SynopsisBlockComponent } from './components/game-detail/synopsis-block/
 import { OverallBreakdownComponent } from './components/game-detail/overall-breakdown/overall-breakdown.component';
 import { ConsoleExclusivesComponent } from './components/game-detail/console-exclusives/console-exclusives.component';
 import { VendorExclusivesComponent } from './components/game-detail/vendor-exclusives/vendor-exclusives.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { VendorExclusivesComponent } from './components/game-detail/vendor-exclu
     SynopsisBlockComponent,
     OverallBreakdownComponent,
     ConsoleExclusivesComponent,
-    VendorExclusivesComponent
+    VendorExclusivesComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
