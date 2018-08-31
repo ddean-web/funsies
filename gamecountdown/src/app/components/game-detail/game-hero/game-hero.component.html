@@ -1,0 +1,18 @@
+<div class="center_content">
+    <div class="hero_wrapper" style="background-image: url('http://gamecountdown.blakemcgillis.com/wp-content/uploads/2018/08/red-dead-redemtion-2-hero.jpg')">
+        <div class="cover_art">
+            <img src="http://gamecountdown.blakemcgillis.com/wp-content/uploads/2018/08/red_dead_redemption_2_box_art.jpg" alt="">
+        </div>
+        <div class="game_heading">
+            <h1>{{title}}</h1>
+            <div class="meta">
+                Publisher | Release Date | Available Platforms
+            </div>
+            <div class="button_group">
+                <div *ngFor="let retailer_link of retailer_links;">
+                    <a href="{{retailer_link.link}}">{{retailer_link.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

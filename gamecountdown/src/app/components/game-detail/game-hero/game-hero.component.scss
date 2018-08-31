@@ -1,0 +1,12 @@
+.hero_wrapper {
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 50px;
+    align-items: center;
+    grid-gap: 30px;
+
+    .game_heading {
+        background-color: white;
+    }
+}
