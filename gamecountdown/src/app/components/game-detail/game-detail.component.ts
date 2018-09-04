@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { GameDetail } from '../../models/game_detail';
-import { FetchGameDetailService } from '../../services/fetch-game-detail.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
-// COMPONENTS
-import { GameHeroComponent } from './game-hero/game-hero.component';
+import { FetchGameDetailService } from '../../services/fetch-game-detail/fetch-game-detail.service';
 
 @Component({
   selector: 'app-game-detail',
@@ -11,17 +10,23 @@ import { GameHeroComponent } from './game-hero/game-hero.component';
   styleUrls: ['./game-detail.component.scss']
 })
 export class GameDetailComponent implements OnInit {
-    game_data: {}
 
-  constructor(private getGameDataService: FetchGameDetailService) {
-  }
+  game_data: {}
+
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private getGameDataService: FetchGameDetailService,
+  ) { }
 
   ngOnInit() {
-      this.getGameData();
+    this.getGameData();
   }
 
   getGameData(){
-      this.getGameDataService.getGameData().subscribe( data => this.game_data = data);
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.getGameDataService.getGameData(id)
+      .subscribe( data => this.game_data = data);
   }
 
 }

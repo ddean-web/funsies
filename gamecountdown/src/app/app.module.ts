@@ -14,6 +14,10 @@ import { ConsoleExclusivesComponent } from './components/game-detail/console-exc
 import { VendorExclusivesComponent } from './components/game-detail/vendor-exclusives/vendor-exclusives.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { FeaturedReleasesComponent } from './components/landing-page/featured-releases/featured-releases.component';
+import { SearchBarComponent } from './components/landing-page/search-bar/search-bar.component';
+import { GameFiltersComponent } from './components/landing-page/game-filters/game-filters.component';
+import { GameListingComponent } from './components/landing-page/game-listing/game-listing.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { AppRoutingModule } from './/app-routing.module';
     OverallBreakdownComponent,
     ConsoleExclusivesComponent,
     VendorExclusivesComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    FeaturedReleasesComponent,
+    SearchBarComponent,
+    GameFiltersComponent,
+    GameListingComponent
   ],
   imports: [
     BrowserModule,

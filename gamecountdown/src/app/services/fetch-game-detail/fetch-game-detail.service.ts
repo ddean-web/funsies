@@ -8,13 +8,11 @@ import { Observable, of } from 'rxjs';
 export class FetchGameDetailService {
     private game_detail_url = 'http://gamecountdown.blakemcgillis.com/wp-json/wp/v2/game/59';  // URL to web api
 
-
   constructor(
       private http: HttpClient,
   ) { }
-  getGameData(): Observable<any> {
-      // var stuff = this.http.get(this.game_detail_url);
-      // console.log(stuff);
-      return this.http.get(this.game_detail_url)
+
+  getGameData(id: number): Observable<any> {
+      return this.http.get('http://gamecountdown.blakemcgillis.com/wp-json/wp/v2/game/' + id);
   }
 }
