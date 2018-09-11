@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { FetchGameDetailService } from '../../services/fetch-game-detail/fetch-game-detail.service';
+import { FetchGameDetailService } from '../../services/game-detail/game-detail.service';
 
 @Component({
   selector: 'app-game-detail',

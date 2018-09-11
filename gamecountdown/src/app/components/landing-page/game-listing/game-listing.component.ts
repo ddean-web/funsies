@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FetchGamesListService } from '../../../services/fetch-games-list/fetch-games-list.service';
+import { FetchGamesListService } from '../../../services/games-listing/games-listing.service';
 
 @Component({
   selector: 'app-game-listing',
