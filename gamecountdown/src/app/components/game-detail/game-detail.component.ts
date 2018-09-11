@@ -11,7 +11,7 @@ import { FetchGameDetailService } from '../../services/fetch-game-detail/fetch-g
 })
 export class GameDetailComponent implements OnInit {
 
-  game_data: {}
+  game_data: {};
 
   constructor(
     private route: ActivatedRoute,
@@ -23,7 +23,7 @@ export class GameDetailComponent implements OnInit {
     this.getGameData();
   }
 
-  getGameData(){
+  getGameData() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.getGameDataService.getGameData(id)
       .subscribe( data => this.game_data = data);
