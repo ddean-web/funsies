@@ -18,6 +18,7 @@ import { FeaturedReleasesComponent } from './components/landing-page/featured-re
 import { SearchBarComponent } from './components/landing-page/search-bar/search-bar.component';
 import { GameFiltersComponent } from './components/landing-page/game-filters/game-filters.component';
 import { GameListingComponent } from './components/landing-page/game-listing/game-listing.component';
+import { FeaturedGamesPipe } from './pipes/featured-games/featured-games.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { GameListingComponent } from './components/landing-page/game-listing/gam
     FeaturedReleasesComponent,
     SearchBarComponent,
     GameFiltersComponent,
-    GameListingComponent
+    GameListingComponent,
+    FeaturedGamesPipe
   ],
   imports: [
     BrowserModule,

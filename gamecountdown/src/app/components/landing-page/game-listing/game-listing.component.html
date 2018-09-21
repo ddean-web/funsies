@@ -1,7 +1,7 @@
-<div class="game_listing_wrap" *ngIf="games_list">
-  <a routerLink="/game-detail/{{ game.id }}" class="game_list_block" *ngFor="let game of games_list">
+<div class="game_listing_wrap" *ngIf="games">
+  <a routerLink="/game-detail/{{ game.id }}" class="game_list_block" *ngFor="let game of games">
     <div class="box_art">
-      <img src="{{ game.acf.hero_cover_art.sizes.medium }}" alt="">
+      <img *ngIf="game.acf.hero_cover_art" src="{{ game.acf.hero_cover_art.sizes.medium }}" alt="">
     </div>
     <div class="game_info">
       <div class="title">{{ game.title.rendered }}</div>

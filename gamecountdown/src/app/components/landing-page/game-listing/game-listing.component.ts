@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FetchGamesListService } from '../../../services/games-listing/games-listing.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-listing',
@@ -8,18 +7,12 @@ import { FetchGamesListService } from '../../../services/games-listing/games-lis
 })
 export class GameListingComponent implements OnInit {
 
-  games_list: {}
+    @Input('games') games: {};
 
-  constructor(private fetchGamesListService: FetchGamesListService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.getGamesList();
-  }
-
-  getGamesList(){
-    this.fetchGamesListService.getGamesList().subscribe( data => this.games_list = data);
-    // console.log( games_list );
   }
 
 }

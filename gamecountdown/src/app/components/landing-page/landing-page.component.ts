@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchGamesListService } from '../../services/games-listing/games-listing.service';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+    games: {};
 
-  constructor() { }
+  constructor(
+      private fetchGamesListService: FetchGamesListService
+  ) { }
 
   ngOnInit() {
+      this.getGamesList();
+  }
+
+  getGamesList(){
+    this.fetchGamesListService.getGamesList().subscribe( data => this.games = data);
+    // console.log( games_list );
   }
 
 }
