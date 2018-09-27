@@ -4,10 +4,12 @@
         <div
             *ngFor="let game of games | featuredGames "
             class="featured_game_block"
-            style.background-image = "{{ game.acf.hero_cover_art ? 'url(' + game.acf.hero_cover_art.sizes.large + ')' : '' }}"
+            style.background-image = "{{ game.acf.hero_cover_art ? 'url(' + game.acf.hero_cover_art.sizes.medium + ')' : '' }}"
         >
-            <div class="game_title">{{ game.title.rendered }}</div>
-            <div class="release_date">{{ game.acf.release_date }}</div>
+            <div class="game_info_container">
+                <div class="game_title">{{ game.title.rendered }}</div>
+                <div class="release_date">{{ game.acf.release_date }}</div>
+            </div>
         </div>
     </div>
 </div>
