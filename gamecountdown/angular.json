@@ -28,9 +28,13 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/app/theme/global.scss"
+              "src/app/theme/global.scss",
+              "node_modules/foundation-sites/dist/css/foundation.css"
             ],
-            "scripts": []
+            "scripts": [
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/foundation-sites/dist/js/foundation.min.js"
+            ]
           },
           "configurations": {
             "production": {
