@@ -14,8 +14,4 @@ export class FeaturedReleasesComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  ngAfterViewInit() {
-    $(document).foundation();
-  }
 }
