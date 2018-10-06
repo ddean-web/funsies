@@ -1,16 +1,26 @@
 <div class="game_listing_wrap" *ngIf="games">
-  <a routerLink="/game-detail/{{ game.id }}" class="game_list_block" *ngFor="let game of games">
-    <div class="box_art">
-      <img *ngIf="game.acf.hero_cover_art" src="{{ game.acf.hero_cover_art.sizes.medium }}" alt="">
+    <div class="game_listing_block" *ngFor="let game of games">
+        <div class="game_image">
+            <a routerLink="/game-detail/{{ game.id }}">
+                <div class="box_art">
+                    <img 
+                        *ngIf="game.acf.hero_cover_art" 
+                        src="{{ game.acf.hero_cover_art.sizes.medium }}" 
+                        alt=""
+                    >
+                </div>
+            </a>
+        </div>
+        <div class="game_info">
+            <a routerLink="/game-detail/{{ game.id }}">
+                <div class="title">{{ game.title.rendered }}</div>
+            </a>
+            <div class="genre"></div>
+            <div class="meta">
+            <span *ngFor="let platform of game.acf.platforms">
+                {{ platform.value }}
+            </span>
+            </div>
+        </div>
     </div>
-    <div class="game_info">
-      <div class="title">{{ game.title.rendered }}</div>
-      <div class="genre"></div>
-      <div class="meta">
-        <span *ngFor="let platform of game.acf.platforms">
-          {{ platform.value }}
-        </span>
-      </div>
-    </div>
-  </a>
 </div>
