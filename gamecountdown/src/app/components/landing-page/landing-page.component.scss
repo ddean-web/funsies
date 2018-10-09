@@ -1,0 +1,14 @@
+@import '../../../assets/foundation-sites/global';
+@import '../../../assets/foundation-sites/settings';
+
+.main-content{
+    
+    @include breakpoint(large){
+        width: 700px;
+        margin: 0 auto;
+    }
+
+    @include breakpoint(xlarge){
+        width: 900px;
+    }
+}
