@@ -5,6 +5,10 @@
     display: flex;
     padding: 10px;
 
+    .button, .search_input {
+        margin-bottom: 0px;
+    }
+
     @include breakpoint(medium){
         .button {
             width: 25%;
