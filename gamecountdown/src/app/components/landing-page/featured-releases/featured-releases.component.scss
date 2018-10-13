@@ -21,10 +21,6 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        @include breakpoint(xlarge){
-            width: 300px;
-        }
-
         .game_info_container {
             width: 100%;
             padding: 15px;
