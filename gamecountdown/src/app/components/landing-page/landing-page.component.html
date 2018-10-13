@@ -2,6 +2,9 @@
     <div class="main-content">
         <app-featured-releases [games]="games"></app-featured-releases>
         <app-search-bar></app-search-bar>
-        <app-game-listing [games]="games"></app-game-listing>
+        <div class="filter_listing_container">
+            <app-game-filters></app-game-filters>
+            <app-game-listing [games]="games"></app-game-listing>
+        </div>
     </div>
 </div>
