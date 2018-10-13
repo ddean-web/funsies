@@ -1,3 +1,19 @@
-.search_bar {
-    border: 1px solid black; //@DEBUG Just temporary
+@import '../../../../assets/foundation-sites/global';
+@import '../../../../assets/foundation-sites/settings';
+
+.search_block {
+    display: flex;
+    padding: 10px;
+
+    @include breakpoint(medium){
+        .button {
+            width: 25%;
+            margin-left: 10px;
+        }
+    }
+
+    @include breakpoint(large){
+        width: 75%;
+        margin: 0 auto;
+    }
 }
