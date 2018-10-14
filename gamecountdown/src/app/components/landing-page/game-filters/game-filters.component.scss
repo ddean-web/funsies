@@ -1,0 +1,31 @@
+@import '../../../../assets/foundation-sites/global';
+@import '../../../../assets/foundation-sites/settings';
+
+.filter_title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.filter_block{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @include breakpoint(large){
+        flex-direction: column;
+    }
+
+    .filter_item {
+        width: 50%;
+        text-align: center;
+
+        @include breakpoint(medium){
+            width: 25%;
+        }
+
+        @include breakpoint(large){
+            width: 100%;
+            text-align: left;
+        }
+    }
+}
